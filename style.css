@@ -1,0 +1,114 @@
+
+/* Base background */
+body {
+    margin: 0;
+    background-color: #faf8f2;
+}
+
+/* Main aura container */
+.aura-bg {
+    position: relative;
+    overflow: hidden;
+    min-height: 100vh;
+}
+
+/* Layer 1 - Pink gradient */
+.aura-layer-1 {
+    position: absolute;
+    inset: 0;
+
+    background: linear-gradient(
+        145deg,
+        #ffe4e6 0%,
+        #fda4af 38%,
+        #fb7185 68%,
+        #e11d48 100%
+    );
+
+    mix-blend-mode: normal;
+    transform: translateZ(0);
+    will-change: transform;
+    pointer-events: none;
+}
+
+/* Layer 2 - Soft glowing effect */
+.aura-layer-2 {
+    position: absolute;
+    inset: 0;
+
+    background: radial-gradient(
+        ellipse 48% 45% at 40% 42%,
+        rgba(255, 255, 255, 0.25) 0%,
+        transparent 62%
+    );
+
+    mix-blend-mode: multiply;
+    filter: blur(100px);
+    transform: translateZ(0);
+    will-change: transform;
+    pointer-events: none;
+}
+
+/* Content stays above background */
+.aura-content {
+    position: relative;
+    z-index: 1;
+}
+.heading{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+    color:#bc1125;
+    border: 2px solid rgb(209, 57, 57);
+    margin: 27px 319px;
+    height: 3px 4px;
+    border-radius: 118px;
+    box-shadow: 19px 12px 34px;
+
+}
+.userpassword{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: #bc1125;
+}
+
+#userinput {
+    display: block;
+    margin: 32px 4px;
+    padding: 13px 68px;
+    border: 2px solid #bc1125;
+    border-radius: 16px;
+    text-align: center;
+    outline: none;
+}
+
+#userinput:focus {
+    border-color: #bc1125;
+}
+.btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    
+}
+#submit{
+    margin: 34px 5px;
+    padding: 10px 25px;
+    
+}
+.btn button{
+    color: #fb7185;
+    background-color: #ffe4e6;
+    border-radius: 30px;
+    border-color: #ed7b88;
+    
+}
+.btn label{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 40px;
+    color: #8b0616;
+
+}
